@@ -1,7 +1,7 @@
 <h2># Include Any Page<h2><br>
 <hr>
   <p><strong>Usage:</strong></p>
- <p>Pass the entire output of any URL into the content of any page by adding [inlude_any_page url="example.com"]. Depending on the theme, a custom page template may be needed. </p>
+ <p>Pass the entire output of any URL into the content of any page by adding [inlude_any_page url="example.com"]. Depending on the theme, a custom page template may be needed if you wish to wrap the external content in the site's header and footer. </p>
   
   Use the following as the page template in a new .php file, and add to your theme or child theme root: 
  ``` 
