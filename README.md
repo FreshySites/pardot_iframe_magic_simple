@@ -1,4 +1,4 @@
-<h2># Plugin-Starter<h2><br>
+<h2># Include Any Page<h2><br>
 <hr>
-<p>FreshySites Plugin Starter - Template Repo</p>
-<a href="https://github.com/FreshyMichael/Plugin-Starter/generate">Use this template</a>
+<p>
+<strong>Usage:</strong> Using the page template Staging Pass Through, pass the entire output of any URL into the content of any page by adding [inlude_any_page url="example.com"]</p>
