@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 
-/* PluginName Start */
+/* Include Any Page Start */
 //______________________________________________________________________________
 
 
@@ -61,5 +61,5 @@ $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 //$myUpdateChecker->setBranch('stable-branch-name');
 
 //______________________________________________________________________________
-/* PluginName End */
+/* Include Any Page End */
 ?>
