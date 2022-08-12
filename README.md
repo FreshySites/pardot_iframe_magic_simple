@@ -4,7 +4,7 @@
  Pass the entire output of any URL into the content of any page by adding [inlude_any_page url="example.com"]. Depending on the theme, a custom page template may be needed. 
   
   Use the following as the page template in a new .php file, and add to your theme or child theme root: 
-  
+ ``` 
  <?php
 /**
  * Template Name: New Page Template Name
@@ -17,3 +17,4 @@
 <?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
+  ```
