@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Pardot iFrame Magic
 * Plugin URI: https://github.com/FreshyMichael/pardot_iframe_magic
-* Description: Send UTM Params to PArdot when using iframe implementation, and pacc piAId and piCId via the same shortcode to additonally included script
+* Description: Send UTM Params to Pardot when using iframe implementation, and pass piAId and piCId via the same shortcode to additonally included script
 * Version: 1.0.0
 * Author: FreshySites
 * Author URI: https://freshysites.com/
