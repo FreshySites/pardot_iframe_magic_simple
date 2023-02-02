@@ -16,23 +16,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* Pardot iFrame Magic */
 //______________________________________________________________________________
 
-
 add_shortcode('pardot_iframe', 'pardot_iframe_magic_func');
 
 
 
 function pardot_iframe_magic_func($atts){
-	
+
 	extract(shortcode_atts(array(
 		'src' =>'',
-		'piAId' =>'',
-		array('piCId' =>''		
+		'piaid' =>'',
+		array('picid' =>''
 	)), $atts));
-	
+
 		?>
 	<script type="text/javascript">
-		piAId = '<?php echo $piAId; ?>';
-		piCId = '<?php echo $piCId; ?>';
+		piAId = '<?php echo $atts['piaid'] ?>';
+		piCId = '<?php echo $atts['picid'] ?>';
 		piHostname = 'pi.pardot.com';
 
 	(function() {
@@ -44,7 +43,8 @@ function pardot_iframe_magic_func($atts){
 		if(window.attachEvent) { window.attachEvent('onload', async_load); }
 		else { window.addEventListener('load', async_load, false); }
 	})();
-</script>
+	</script>
+	
 	<script type="text/javascript">
  	var form = '<?php echo $src; ?>';
 	var params = window.location.search;
@@ -65,16 +65,15 @@ function pardot_iframe_magic_func($atts){
 
 
 
-	<?php 
+	<?php
 	ob_start();
-	// echo $src;
-	//echo $atts[1];
+
 	echo '<iframe src="'. $src .'" width="100%" height="800" type="text/html" frameborder="0" allowTransparency="true" style="border: 0;display:none;"></iframe>';
 
 	$ReturnString = ob_get_contents();
-		
+
 	ob_end_clean();
-	
+
 	return $ReturnString;
 }
 //______________________________________________________________________________
