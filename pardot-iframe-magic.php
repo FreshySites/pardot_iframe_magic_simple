@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Pardot iFrame Magic
 * Plugin URI: https://github.com/FreshyMichael/pardot_iframe_magic
-* Description: Send UTM Params to Pardot when using iframe implementation, and pass piAId and piCId via the same shortcode to additonally included script
+* Description: Send UTM Params to Pardot when using iframe implementation, and pass piAId and piCId via the same shortcode to additionally included script
 * Version: 1.0.0
 * Author: FreshySites
 * Author URI: https://freshysites.com/
@@ -24,10 +24,17 @@ function pardot_iframe_magic_func($atts){
 
 	extract(shortcode_atts(array(
 		'src' =>'',
+		'height' => '',
 		'piaid' =>'',
-		array('picid' =>''
-	)), $atts));
+		'picid' =>''
+	), $atts));
 
+		if (!empty($atts['height'])){
+			$iframe_height = $atts['height'];
+		}
+		else {
+			$iframe_height = '800';
+		}
 		?>
 	<script type="text/javascript">
 		piAId = '<?php echo $atts['piaid'] ?>';
@@ -44,7 +51,7 @@ function pardot_iframe_magic_func($atts){
 		else { window.addEventListener('load', async_load, false); }
 	})();
 	</script>
-	
+
 	<script type="text/javascript">
  	var form = '<?php echo $src; ?>';
 	var params = window.location.search;
@@ -54,7 +61,7 @@ function pardot_iframe_magic_func($atts){
  	iframe.setAttribute('src', form + params);
  	iframe.setAttribute('width', '100%');
 	iframe.setAttribute('id', 'param_iframe');
- 	iframe.setAttribute('height', 800);
+ 	iframe.setAttribute('height', <?php echo $iframe_height; ?>);
  	iframe.setAttribute('type', 'text/html');
  	iframe.setAttribute('frameborder', 0);
  	iframe.setAttribute('allowTransparency', 'true');
@@ -68,7 +75,7 @@ function pardot_iframe_magic_func($atts){
 	<?php
 	ob_start();
 
-	echo '<iframe src="'. $src .'" width="100%" height="800" type="text/html" frameborder="0" allowTransparency="true" style="border: 0;display:none;"></iframe>';
+	echo '<iframe src="'. $src .'" width="100%" height="'. $iframe_height .'" type="text/html" frameborder="0" allowTransparency="true" style="border: 0;display:none;"></iframe>';
 
 	$ReturnString = ob_get_contents();
 
