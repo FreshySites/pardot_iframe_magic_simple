@@ -1,8 +1,8 @@
 <?php
 /**
 * Plugin Name: Pardot iFrame Magic
-* Plugin URI: https://github.com/FreshyMichael/pardot_iframe_magic
-* Description: Send UTM Params to Pardot when using iframe implementation, and pass piAId and piCId via the same shortcode to additionally included script
+* Plugin URI: https://github.com/FreshyMichael/pardot_iframe_magic_simple
+* Description: Send UTM Params to Pardot when using Pardot's iframe implementation option
 * Version: 1.0.0
 * Author: FreshySites
 * Author URI: https://freshysites.com/
@@ -73,7 +73,7 @@ function pardot_iframe_magic_func($atts){
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 // ***IMPORTANT*** Update this path to New Github Repository Master Branch Path
-	'https://github.com/FreshyMichael/pardot_iframe_magic',
+	'https://github.com/FreshyMichael/pardot_iframe_magic_simple',
 	__FILE__,
 // ***IMPORTANT*** Update this to New Repository Master Branch Path
 	'include-any-page'
