@@ -25,8 +25,6 @@ function pardot_iframe_magic_func($atts){
 	extract(shortcode_atts(array(
 		'src' =>'',
 		'height' => '',
-		'piaid' =>'',
-		'picid' =>''
 	), $atts));
 
 		if (!empty($atts['height'])){
@@ -36,21 +34,6 @@ function pardot_iframe_magic_func($atts){
 			$iframe_height = '800';
 		}
 		?>
-	<script type="text/javascript">
-		piAId = '<?php echo $atts['piaid'] ?>';
-		piCId = '<?php echo $atts['picid'] ?>';
-		piHostname = 'pi.pardot.com';
-
-	(function() {
-		function async_load(){
-			var s = document.createElement('script'); s.type = 'text/javascript';
-			s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
-		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
-		}
-		if(window.attachEvent) { window.attachEvent('onload', async_load); }
-		else { window.addEventListener('load', async_load, false); }
-	})();
-	</script>
 
 	<script type="text/javascript">
  	var form = '<?php echo $src; ?>';
