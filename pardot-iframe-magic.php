@@ -122,5 +122,5 @@ $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 //$myUpdateChecker->setBranch('stable-branch-name');
 
 //______________________________________________________________________________
-/* Pardot iFrame Magic End */
+/* Include Any Page End */
 ?>
