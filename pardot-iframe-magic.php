@@ -72,7 +72,7 @@ function pardot_iframe_magic_func($atts){
  	iframe.setAttribute('src', form + params);
  	iframe.setAttribute('width', '100%');
 	iframe.setAttribute('id', 'param_iframe');
- 	iframe.setAttribute('height', <?php echo " ' " . $iframe_height . " ' ";  ?>);
+ 	iframe.setAttribute('height', <?php if(isMobileDevice($is_mob) === 1){ echo " ' " . $mobile_height . " ' ";} else{ echo " ' " . $iframe_height . " ' ";}  ?>);
  	iframe.setAttribute('type', 'text/html');
  	iframe.setAttribute('frameborder', 0);
  	iframe.setAttribute('allowTransparency', 'true');
