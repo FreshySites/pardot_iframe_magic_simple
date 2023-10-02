@@ -3,7 +3,7 @@
 * Plugin Name: Pardot iFrame Magic
 * Plugin URI: https://github.com/FreshySites/pardot_iframe_magic_simple
 * Description: Send UTM Params to Pardot when using Pardot's iframe implementation option
-* Version: 1.0.0
+* Version: 1.1.0
 * Author: FreshySites
 * Author URI: https://freshysites.com/
 * License: GNU v3.0
